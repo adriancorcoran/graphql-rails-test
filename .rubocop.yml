@@ -1,0 +1,23 @@
+# Inherit from the Shopify Ruby Style Guide
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+# Make sure this Ruby version matches the one in our Gemfile
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "node_modules/**/*"
+
+# Allow lines to be longer than max
+Layout/LineLength:
+  Exclude:
+    - "config/routes.rb"
+
+# Don't expect frozen_string_literal comments in certain files
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - "**.gemspec"
+    - "**/Gemfile"
+    - "**/Rakefile"

@@ -59,6 +59,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ast (2.4.1)
     avro (1.9.2)
       multi_json
     bindex (0.8.1)
@@ -116,6 +117,10 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (~> 0.14)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.11.1)
     httpclient (2.8.3)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
@@ -165,6 +170,9 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     os (1.1.0)
+    parallel (1.19.2)
+    parser (2.7.1.4)
+      ast (~> 2.4.1)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -199,6 +207,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
+    rainbow (3.0.0)
     raindrops (0.19.1)
     rake (13.0.1)
     rb-fsevent (0.10.4)
@@ -210,8 +219,23 @@ GEM
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
     retriable (3.1.2)
+    rexml (3.2.4)
+    rubocop (0.85.1)
+      parallel (~> 1.10)
+      parser (>= 2.7.0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.7)
+      rexml
+      rubocop-ast (>= 0.0.3)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.0.3)
+      parser (>= 2.7.0.1)
+    rubocop-shopify (1.0.3)
+      rubocop (~> 0.85.0)
     ruby-kafka (1.1.0)
       digest-crc
+    ruby-progressbar (1.10.1)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -266,6 +290,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uber (0.1.0)
+    unicode-display_width (1.7.0)
     web-console (4.0.3)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -293,6 +318,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  graphiql-rails
+  graphql (~> 1.11)
   jbuilder (~> 2.7)
   kafka-shopify!
   listen (~> 3.2)
@@ -300,6 +327,8 @@ DEPENDENCIES
   mysql2 (>= 0.4.4)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
+  rubocop
+  rubocop-shopify (>= 1.0.3)
   sass-rails (>= 6)
   selenium-webdriver
   shopify-cloud!

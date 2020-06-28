@@ -56,3 +56,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'shopify-cloud', source: 'https://packages.shopify.io/shopify/gems'
 gem 'monorail', source: 'https://packages.shopify.io/shopify/gems'
 gem 'kafka-shopify', source: 'https://packages.shopify.io/shopify/gems'
+
+# add rubocop
+gem 'rubocop', require: false
+gem 'rubocop-shopify', '>= 1.0.3', require: false
+
+gem "graphql", "~> 1.11"
+
+gem 'graphiql-rails', group: :development

@@ -64,3 +64,5 @@ gem 'rubocop-shopify', '>= 1.0.3', require: false
 gem "graphql", "~> 1.11"
 
 gem 'graphiql-rails', group: :development
+
+gem 'react-rails'
